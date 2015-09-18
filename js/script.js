@@ -1,7 +1,8 @@
+"use strict";
 
-$('#form-container').submit(function() {
 
-    var $body = $('body');
+$("#form-container").submit(function() {
+    var $body = $("body");
     var $main_header = $('#main-header');
     var $wikiElem = $('#wikipedia-links');
     var $wiki_headerElem = $('#wikipedia-header')
@@ -15,7 +16,7 @@ $('#form-container').submit(function() {
     var street = $('#street').val();
     var city = $('#city').val();
 
-    if (street == null || city == null || street == "" || city == "") {
+    if (!(street | city)) {
         alert("Fill out all the required information!");
         return false;
     };
@@ -29,7 +30,7 @@ $('#form-container').submit(function() {
 
     $.getJSON(nyt_URL, function(data){
         var items = [];
-        $nytHeaderElem.text('All the NY Times articles about '+city+' will be presented here'); 
+        $nytHeaderElem.text('All the NY Times articles about '+city+' will be presented here');
         var articles = data.response.docs;
         for (var i = 0; i < articles.length; i++) {
             var article = articles[i];
