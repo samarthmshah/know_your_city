@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Know your city</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-inverse navbar-custom-font">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-custom-brand" href="#">
+              <strong>Know Your City</strong>
+            </a>
+          </div>
+
+          <form id="form-container" class="form-container navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <label for="street">Street: </label>
+              <input type="text" id="street" value="" class="form-control" placeholder="Enter street name...">
+            </div>
+            <div class="form-group">
+              <label for="city">City: </label>
+              <input type="text" id="city" value="" class="form-control" placeholder="Enter city name...">
+            </div>
+            <button class="btn btn-success" id="submit-btn">Get Info
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </form>
+
+        </div>
+      </nav>
+    </div>
+
+    <h2 id="main-header" class="text-center text-info">Which place do you want to know about?</h2>
+
+    <div class="wikipedia-container">
+      <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+      <ul id="wikipedia-links" class="list-group">Find relevant Wikipedia articles here!</ul>
+    </div>
+
+
+    <div class="nytimes-container">
+      <h3 id="nytimes-header">New York Times Articles</h3>
+      <ul id="nytimes-articles" class="article-list list-group">What's going on in your city? Let New York Times tell you here.</ul>
+    </div>
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </div>
+
+  <nav class="navbar navbar-inverse navbar-fixed-bottom navbar-custom-font">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-custom-brand" href=#>
+          <strong>About Me:</strong>
+        </a>
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav-custom">
+          <li>
+            <a href="http://samarth-shah.appspot.com/" class="">
+              <span class="glyphicon-custom glyphicon-flash"></span>
+              <strong>Samarth Shah</strong>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Powered By: <strong>$.ajax()</strong>.</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
